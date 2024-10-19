@@ -1,5 +1,6 @@
 import pygame
 
+from dragon.dragon import Dragon
 from tracker import Tracker
 
 
@@ -11,7 +12,7 @@ pygame.display.set_caption("Mouse Tracker")
 clock = pygame.time.Clock()
 # font = pygame.font.SysFont('quicksand.ttf', 20)
 
-tracker = Tracker(screen)
+dragon = Dragon(screen)
 
 
 running = True
@@ -23,7 +24,7 @@ while running:
             pygame.quit()
             running = False
         
-    tracker.update(*pygame.mouse.get_pos())
+    dragon.update(*pygame.mouse.get_pos())
 
     pygame.display.flip()
     clock.tick(60)
