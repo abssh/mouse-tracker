@@ -9,11 +9,10 @@ class Tracker():
         self.x, self. y = root.get_rect().center
 
     
-    def update(self, x, y):
+    def update(self, mx, my):
         cx, cy = self.x, self.y
-        x, y = (x - cx, y - cy)
+        x, y = (mx - cx, my - cy)
         l = sqrt((x**2) + (y**2))/5
-        
         dx, dy = (x/l), (y/l)
         
         if l < 0.9:
