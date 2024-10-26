@@ -1,32 +1,32 @@
 from random import random
 
 from pygame import Surface
-from dragon import DragonStatics
-from dragon.body import DragonBody
-from dragon.head import DragonHead
+from worm import WormStatics
+from worm.body import WormBody
+from worm.head import WormHead
 
 
-class Dragon:
+class Worm:
 
     def __init__(self, root: Surface, body_length=40):
         self.root = root
         pos = root.get_rect().center
-        self.head = DragonHead(root, pos)
+        self.head = WormHead(root, pos)
 
-        self.body: list[DragonBody] = []
+        self.body: list[WormBody] = []
         x, y = pos
 
         lead = self.head
         for i in range(body_length):
-            x += DragonStatics.SpineSpace
+            x += WormStatics.SpineSpace
 
             if i % 3 == 0:
-                part = DragonBody(root, (x,y), lead, True)
+                part = WormBody(root, (x, y), lead, True)
                 self.body.append(part)
                 lead = part
                 continue
 
-            part = DragonBody(root, (x, y), lead)
+            part = WormBody(root, (x, y), lead)
             self.body.append(part)
 
             lead = part

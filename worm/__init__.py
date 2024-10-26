@@ -1,15 +1,15 @@
 from colors import Colors
 
 
-class DragonStatics:
+class WormStatics:
     HeadSize = 12
     BodyCoreSize = 8
     CoreJointSize = 3
 
-    SpineSpace = 40
+    SpineSpace = 30
 
     SkeletonWidth = 4
-    SkeletonHeight = 20
+    SkeletonHeight = 30
     SkeletonVectorRatioU = (-3, 2)
     SkeletonVectorRatioD = (-3, -2)
 
