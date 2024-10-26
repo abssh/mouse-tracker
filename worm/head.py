@@ -1,18 +1,18 @@
 from typing import Tuple, Any
 
 from geometry.draw import draw_circle_with_center
-from dragon import DragonStatics
+from worm import WormStatics
 
 from math import sqrt
 from pygame import Surface
 
 
-class DragonHead:
+class WormHead:
 
     def __init__(self, root: Surface, pos):
         self.root = root
         self.pos = pos
-        self.size = DragonStatics.HeadSize
+        self.size = WormStatics.HeadSize
 
     def update(self, mx, my) -> tuple[int | float | Any, int | float | Any]:
         cx, cy = self.pos
@@ -29,7 +29,7 @@ class DragonHead:
             self.root,
             (nx, ny),
             self.size,
-            DragonStatics.HeadColor
+            WormStatics.HeadColor
         )
 
         self.pos = (nx, ny)

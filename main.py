@@ -1,7 +1,7 @@
 import pygame
 
 from colors import Colors
-from dragon.dragon import Dragon
+from worm.worm import Worm
 
 pygame.init()
 
@@ -11,7 +11,7 @@ pygame.display.set_caption("Mouse Tracker")
 clock = pygame.time.Clock()
 # font = pygame.font.SysFont('quicksand.ttf', 20)
 
-dragon = Dragon(screen)
+worm = Worm(screen)
 
 running = True
 while running:
@@ -22,7 +22,7 @@ while running:
             pygame.quit()
             running = False
 
-    dragon.update(*pygame.mouse.get_pos())
+    worm.update(*pygame.mouse.get_pos())
 
     pygame.display.flip()
-    clock.tick(60)
+    clock.tick(80)
