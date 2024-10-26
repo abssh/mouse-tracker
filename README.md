@@ -11,7 +11,7 @@ python3 -m virtualenv .venv
 python main.py
 ```
 
-## previwe
+## preview
 
 https://github.com/user-attachments/assets/4eb48554-ce7c-4b00-8d06-d01d23571e65
 
